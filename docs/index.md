@@ -1,0 +1,12 @@
+- Getting Started
+  - Creating your repo
+  - Available Scripts
+  - Updating to New Releases
+  - Arty Vs. Create React App
+- Extending Arty
+  - Adding Helix UI
+  - State Management with Redux
+  - Routing
+- Patterns
+  - TypeScript
+  - Redux
