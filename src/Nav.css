@@ -1,0 +1,23 @@
+.nav-title {
+  font-size: 2.5rem;
+  line-height: 2.1rem;
+  font-weight: 600;
+  color: #28b463;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav-subtitle {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Selector is specific to override Helix's style */
+.hxNav a[href].nav-category {
+  font-weight: 600;
+}
+
+.hxNav a[href].nav-item {
+  padding-left: 2rem;
+}
