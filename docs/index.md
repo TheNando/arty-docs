@@ -4,7 +4,7 @@
   - Updating to New Releases
   - Arty Vs. Create React App
 - Extending Arty
-  - [Adding Helix UI](docs/Adding Helix UI.md)
+  - [Adding Helix UI](./docs/Adding Helix UI.md)
   - State Management with Redux
   - Routing
 - Patterns
