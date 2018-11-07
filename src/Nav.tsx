@@ -1,14 +1,17 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import MarkdownUtils from "./modules/MarkdownUtils";
 import "./Nav.css";
 
 export interface NavItem {
   name: string;
+  link: string;
 }
 
 export interface NavCategory {
   name: string;
   items: Array<NavItem>;
+  link: string;
 }
 
 class Nav extends Component {
@@ -36,15 +39,15 @@ class Nav extends Component {
         {categories.map((category: NavCategory) => (
           <React.Fragment key={category.name}>
             {/* Render the Nav Category */}
-            <a href="#" className="nav-category">
+            <Link className="nav-category" to={category.link}>
               {category.name}
-            </a>
+            </Link>
 
             {/* Render Nav Category's Nav Items */}
             {category.items.map((item: NavItem) => (
-              <a href="#" className="nav-item" key={item.name}>
+              <Link className="nav-item" key={item.name} to={item.link}>
                 {item.name}
-              </a>
+              </Link>
             ))}
           </React.Fragment>
         ))}

@@ -1,12 +1,15 @@
-- Getting Started
-  - Creating your repo
-  - Available Scripts
-  - Updating to New Releases
-  - Arty Vs. Create React App
-- Extending Arty
-  - [Adding Helix UI](./docs/Adding Helix UI.md)
-  - State Management with Redux
-  - Routing
-- Patterns
-  - TypeScript
-  - Redux
+- [Getting Started](Getting%20Started.md)
+  - [Creating your repo](Getting%20Started/Creating%20your%20repo.md)
+  - [Available Scripts](Getting%20Started/Available%20Scripts.md)
+  - [Updating to New Releases](Getting%20Started/Updating%20to%20New%20Releases.md)
+  - [Arty Vs. Create React App](Getting%20Started/Arty%20Vs.%20Create%20React%20App.md)
+- [Extending Arty](Extending%20Arty.md)
+  - [Adding Helix UI](Extending%20Arty/Adding%20Helix%20UI.md)
+  - [State Management with Redux](Extending%20Arty/State%20Management%20with%20Redux.md)
+  - [State Management with Rematch](Extending%20Arty/State%20Management%20with%20Rematch.md)
+  - [Routing](Extending%20Arty/Routing.md)
+  - [Async/Await Support](Extending%20Arty/Async%20Await%20Support.md)
+- [Patterns](Patterns.md)
+  - [React](Patterns/React.md)
+  - [TypeScript](Patterns/TypeScript.md)
+  - [Redux](Patterns/Redux.md)
