@@ -37,7 +37,6 @@ const MarkdownUtils = {
 
   /** Retrieve md content from docs by given category and page */
   getPageContent: async (category: string, page: string) => {
-    console.log(category, page);
     const converter = new showdown.Converter();
     try {
       const content = category
