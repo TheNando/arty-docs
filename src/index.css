@@ -1,5 +1,6 @@
 :root {
   --accent-color: #28b463;
+  --nav-item-highlight: #616161;
 }
 
 body {
@@ -47,6 +48,10 @@ nav {
 
 .hxNav a[href].nav-item {
   padding-left: 2rem;
+}
+
+.hxNav a[href].active {
+  color: var(--accent-color);
 }
 
 /* Markdown */

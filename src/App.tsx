@@ -10,8 +10,8 @@ class App extends Component {
       <BrowserRouter>
         <div id="stage">
           <Nav />
-          <Route exact path="/:category/:page" component={Page} />
-          <Route exact path="/:category" component={Page} />
+          <Route exact path="/:category?/:page" component={Page} />
+          {/* <Route exact path="/:category" component={Page} /> */}
         </div>
       </BrowserRouter>
     );

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
+import { NavLink } from "react-router-dom";
+import { RouteProps } from "./Page";
 import MarkdownUtils from "./modules/MarkdownUtils";
 
 export interface NavItem {
@@ -13,7 +15,7 @@ export interface NavCategory {
   link: string;
 }
 
-class Nav extends Component {
+class Nav extends Component<RouteProps> {
   state = {
     categories: []
   };
@@ -27,8 +29,14 @@ class Nav extends Component {
       });
   }
 
+  isUrl = (url: string, category: string, item: string = "") =>
+    url === `/${category}${item ? "/" + item : ""}.md`;
+
   render() {
+    const { isUrl } = this;
     const { categories } = this.state;
+    const url = this.props.location.pathname;
+
     return (
       <nav id="nav" className="hxNav">
         <div className="nav-title">Arty</div>
@@ -38,15 +46,24 @@ class Nav extends Component {
         {categories.map((category: NavCategory) => (
           <React.Fragment key={category.name}>
             {/* Render the Nav Category */}
-            <Link className="nav-category" to={category.link}>
+            <NavLink
+              className="nav-category"
+              isActive={e => isUrl(url, category.name)}
+              to={category.link}
+            >
               {category.name}
-            </Link>
+            </NavLink>
 
             {/* Render Nav Category's Nav Items */}
             {category.items.map((item: NavItem) => (
-              <Link className="nav-item" key={item.name} to={item.link}>
+              <NavLink
+                key={item.name}
+                className="nav-item"
+                isActive={e => isUrl(url, category.name, item.name)}
+                to={item.link}
+              >
                 {item.name}
-              </Link>
+              </NavLink>
             ))}
           </React.Fragment>
         ))}
@@ -55,4 +72,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default withRouter(Nav);

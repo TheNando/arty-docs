@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import { withRouter, RouteComponentProps } from "react-router";
 import MarkdownUtils from "./modules/MarkdownUtils";
 
-interface ParamProps {
+export interface RouteParamProps {
   category: string;
   page: string;
 }
 
-interface ComponentProps extends RouteComponentProps<ParamProps> {}
+export interface RouteProps extends RouteComponentProps<RouteParamProps> {}
 
 interface State {
   content: Object;
 }
 
-class Page extends Component<ComponentProps, State> {
+class Page extends Component<RouteProps, State> {
   state = {
     content: { __html: "" }
   };
@@ -24,7 +24,7 @@ class Page extends Component<ComponentProps, State> {
   }
 
   // Set content on route changes only
-  componentDidUpdate(prevProps: ComponentProps) {
+  componentDidUpdate(prevProps: RouteProps) {
     if (this.props.location !== prevProps.location) {
       this.setContent();
     }
