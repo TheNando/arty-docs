@@ -1,3 +1,7 @@
+:root {
+  --accent-color: #28b463;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +15,59 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Nav */
+
+nav {
+  height: 100vh;
+  width: 250px;
+  overflow-y: auto;
+}
+
+.nav-title {
+  font-size: 2.5rem;
+  line-height: 2.1rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav-subtitle {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Selector is specific to override Helix's style */
+.hxNav a[href].nav-category {
+  font-weight: 600;
+}
+
+.hxNav a[href].nav-item {
+  padding-left: 2rem;
+}
+
+/* Markdown */
+.markdown {
+  height: 100vh;
+  max-width: 750px;
+  overflow-y: auto;
+}
+
+.markdown pre {
+  margin: 1rem 0;
+}
+
+/* Error Page */
+
+.error-number {
+  color: var(--accent-color);
+  font-size: 10rem;
+  text-align: center;
+}
+
+.error-msg {
+  text-align: center;
 }

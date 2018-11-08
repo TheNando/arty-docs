@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import MarkdownUtils from "./modules/MarkdownUtils";
-import "./Nav.css";
 
 export interface NavItem {
   name: string;

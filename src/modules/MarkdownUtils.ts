@@ -38,13 +38,27 @@ const MarkdownUtils = {
   /** Retrieve md content from docs by given category and page */
   getPageContent: async (category: string, page: string) => {
     const converter = new showdown.Converter();
-    const content = page
-      ? require(`../docs/${category}/${page}`)
-      : require(`../docs/${category}`);
+    try {
+      const content = page
+        ? require(`../docs/${category}/${page}`)
+        : require(`../docs/${category}`);
 
-    return await fetch(content)
-      .then(response => response.text())
-      .then(text => ({ content: { __html: converter.makeHtml(text) } }));
+      return await fetch(content)
+        .then(response => response.text())
+        .then(text => ({ content: { __html: converter.makeHtml(text) } }));
+    } catch (error) {
+      return {
+        content: {
+          __html: `
+            <h1 class="error-number">404</h1>
+            <h2 class="error-msg">
+              No file found at path
+              <strong>${category}${page ? "/" + page : ""}</strong>
+            </h2>
+          `
+        }
+      };
+    }
   }
 };
 
