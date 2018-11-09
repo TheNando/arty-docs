@@ -16,7 +16,7 @@ Arty requires Node v8.7 or above.
 
 Clone the [arty-stack](https://github.rackspace.com/CARE/arty-stack) repo with Git and either run either `npm install` or `yarn install`, depending on your preferred Node package manager.
 
-## Running Arty
+## Using Arty
 
 ### Running
 
