@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Nav from "./Nav";
 import Page from "./Page";
 import logo from "./logo.svg";
@@ -7,12 +7,12 @@ import logo from "./logo.svg";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div id="stage">
           <Nav />
           <Route exact path="/:category?/:page" component={Page} />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

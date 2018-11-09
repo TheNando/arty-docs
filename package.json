@@ -1,14 +1,16 @@
 {
   "name": "arty-stack",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React/Redux/Typescript stack front end application seed project",
   "repository": "https://github.rackspace.com/CARE/arty-stack",
+  "homepage": "https://pages.github.rackspace.com/CARE/arty-docs",
   "author": "Nando Pena <fernando.pena@rackspace.com>",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "gh-pages": "yarn build && ./scripts/publish.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
