@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/CARE/arty-docs/static/media/index.bef0c05d.md"
   },
   {
-    "revision": "2b9c1bc129164ba0dca3",
+    "revision": "8cd1ce886de9e903d08c",
     "url": "/CARE/arty-docs/static/css/main.80ac8287.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/CARE/arty-docs/static/js/runtime~main.0ee69a33.js"
   },
   {
-    "revision": "3979420dccd39d70e52b3341563c9c79",
-    "url": "/CARE/arty-docs/static/media/README.3979420d.md"
+    "revision": "3cce56dc1b75122555a02eccbd989f32",
+    "url": "/CARE/arty-docs/static/media/README.3cce56dc.md"
   },
   {
-    "revision": "2b9c1bc129164ba0dca3",
-    "url": "/CARE/arty-docs/static/js/main.2b9c1bc1.chunk.js"
+    "revision": "8cd1ce886de9e903d08c",
+    "url": "/CARE/arty-docs/static/js/main.8cd1ce88.chunk.js"
   },
   {
     "revision": "d4f6fa52474538795a4cec5c652be64f",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/CARE/arty-docs/static/css/1.e314a92a.chunk.css"
   },
   {
-    "revision": "26dea205ba12507e64a72d877da7f5c2",
+    "revision": "4a00790f0ef7ddb9b74107045d883b49",
     "url": "/CARE/arty-docs/index.html"
   }
 ];
