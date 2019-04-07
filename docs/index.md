@@ -1,4 +1,4 @@
-- [Getting Started](Getting%20Started/index.md)
+- [Getting Started](README.md)
   - [Creating your repo](Getting%20Started/Creating%20your%20repo.md)
   - [Available Scripts](Getting%20Started/Available%20Scripts.md)
   - [Updating to New Releases](Getting%20Started/Updating%20to%20New%20Releases.md)
