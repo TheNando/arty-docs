@@ -50,7 +50,8 @@ nav {
   padding-left: 2rem;
 }
 
-.hxNav a[href].active {
+.hxNav a[href].active,
+.hxNav a[href].active:hover {
   color: var(--accent-color);
 }
 

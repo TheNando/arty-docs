@@ -20,20 +20,12 @@ class Nav extends Component<RouteProps> {
     categories: []
   };
 
-  componentDidMount() {
-    fetch(require("./docs/index.md"))
-      .then(response => response.text())
-      .then(text => {
-        const categories = MarkdownUtils.mdToCategories(text);
-        this.setState({ categories });
-      });
+  async componentDidMount() {
+    const categories = await MarkdownUtils.getTableOfContents();
+    this.setState({ categories });
   }
 
-  isUrl = (url: string, category: string, item: string = "") =>
-    url === `/${category}${item ? "/" + item : ""}.md`;
-
   render() {
-    const { isUrl } = this;
     const { categories } = this.state;
     const url = this.props.location.pathname;
 
@@ -48,7 +40,7 @@ class Nav extends Component<RouteProps> {
             {/* Render the Nav Category */}
             <NavLink
               className="nav-category"
-              isActive={e => isUrl(url, category.name)}
+              isActive={e => encodeURI(url) === category.link}
               to={category.link}
             >
               {category.name}
@@ -59,7 +51,7 @@ class Nav extends Component<RouteProps> {
               <NavLink
                 key={item.name}
                 className="nav-item"
-                isActive={e => isUrl(url, category.name, item.name)}
+                isActive={e => encodeURI(url) === item.link}
                 to={item.link}
               >
                 {item.name}

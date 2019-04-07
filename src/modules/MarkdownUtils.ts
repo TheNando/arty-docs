@@ -10,6 +10,13 @@ const rxMdLink = /\((.*)\)/;
 const rxIsCategory = /^- \[/;
 // const rxIsDoc = /^  - \[/
 
+const TOKEN = "access_token=0ca7dc5a20542093a1b6daf90f918e74e88069ff";
+
+const DOCS_PATH =
+  "https://github.rackspace.com/api/v3/repos/CARE/arty-docs/contents/docs/";
+
+const INDEX_URL = `${DOCS_PATH}index.md?${TOKEN}`;
+
 const MarkdownUtils = {
   /** Generate Nav menu from markdown text. Expects a 2 level deep md list */
   mdToCategories: (md: string) =>
@@ -39,13 +46,15 @@ const MarkdownUtils = {
   getPageContent: async (category: string, page: string) => {
     const converter = new showdown.Converter();
     try {
-      const content = category
-        ? require(`../docs/${category}/${page}`)
-        : require(`../docs/${page}`);
+      const path = `${category ? category + "/" : ""}${page}`;
+
+      const content = `${DOCS_PATH}${path}?${TOKEN}`;
 
       return await fetch(content)
-        .then(response => response.text())
-        .then(text => ({ content: { __html: converter.makeHtml(text) } }));
+        .then(response => response.json())
+        .then(meta => ({
+          content: { __html: converter.makeHtml(atob(meta.content)) }
+        }));
     } catch (error) {
       return {
         content: {
@@ -59,7 +68,12 @@ const MarkdownUtils = {
         }
       };
     }
-  }
+  },
+
+  getTableOfContents: () =>
+    fetch(INDEX_URL)
+      .then(response => response.json())
+      .then(meta => MarkdownUtils.mdToCategories(atob(meta.content)))
 };
 
 export default MarkdownUtils;
