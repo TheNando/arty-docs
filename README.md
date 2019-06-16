@@ -1,4 +1,4 @@
-# Arty - A React/Typescript Stack
+# Arty - A React and Typescript coding patterns library
 
 ## What is Arty?
 
