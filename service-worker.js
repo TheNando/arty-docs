@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/CARE/arty-docs/precache-manifest.c7da3c26c5d0636eedf4557da9ef713a.js"
+  "/arty-docs/precache-manifest.8892411097d6dee8ccbd5d0d2ee1a6a6.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/CARE/arty-docs/index.html", {
+workbox.routing.registerNavigationRoute("/arty-docs/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
