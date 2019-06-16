@@ -4,7 +4,6 @@
   - [Updating to New Releases](Getting%20Started/Updating%20to%20New%20Releases.md)
   - [Arty Vs. Create React App](Getting%20Started/Arty%20Vs.%20Create%20React%20App.md)
 - [Extending Arty](Extending%20Arty/index.md)
-  - [Adding Helix UI](Extending%20Arty/Adding%20Helix%20UI.md)
   - [State Management with Redux](Extending%20Arty/State%20Management%20with%20Redux.md)
   - [State Management with Rematch](Extending%20Arty/State%20Management%20with%20Rematch.md)
   - [Routing](Extending%20Arty/Routing.md)

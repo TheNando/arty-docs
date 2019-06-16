@@ -13,9 +13,6 @@ import "@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js";
 // loader appends polyfills, if needed -->
 import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
 
-// Helix UI client library
-import "helix-ui/dist/scripts/helix-ui";
-
 ReactDOM.render(<App />, document.getElementById("app"));
 
 // If you want your app to work offline and load faster, you can change

@@ -10,10 +10,10 @@ const rxMdLink = /\((.*)\)/;
 const rxIsCategory = /^- \[/;
 // const rxIsDoc = /^  - \[/
 
-const TOKEN = "access_token=0ca7dc5a20542093a1b6daf90f918e74e88069ff";
+const TOKEN = "access_token=7bdae34da0d3a3425e9c3350bab96cdfe4f0dfdd";
 
 const DOCS_PATH =
-  "https://github.rackspace.com/api/v3/repos/CARE/arty-docs/contents/docs/";
+  "https://github.com/api/v3/repos/TheNando/arty-docs/contents/docs/";
 
 const INDEX_URL = `${DOCS_PATH}index.md?${TOKEN}`;
 
