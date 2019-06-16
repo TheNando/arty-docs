@@ -10,12 +10,10 @@ const rxMdLink = /\((.*)\)/;
 const rxIsCategory = /^- \[/;
 // const rxIsDoc = /^  - \[/
 
-const TOKEN = "access_token=7bdae34da0d3a3425e9c3350bab96cdfe4f0dfdd";
-
 const DOCS_PATH =
-  "https://github.com/api/v3/repos/TheNando/arty-docs/contents/docs/";
+  "https://api.github.com/repos/TheNando/arty-docs/contents/docs/";
 
-const INDEX_URL = `${DOCS_PATH}index.md?${TOKEN}`;
+const INDEX_URL = `${DOCS_PATH}index.md?`;
 
 const MarkdownUtils = {
   /** Generate Nav menu from markdown text. Expects a 2 level deep md list */
@@ -48,7 +46,7 @@ const MarkdownUtils = {
     try {
       const path = `${category ? category + "/" : ""}${page}`;
 
-      const content = `${DOCS_PATH}${path}?${TOKEN}`;
+      const content = `${DOCS_PATH}${path}?`;
 
       return await fetch(content)
         .then(response => response.json())
