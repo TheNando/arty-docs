@@ -9,6 +9,7 @@
   - [Routing](Extending%20Arty/Routing.md)
   - [Async/Await Support](Extending%20Arty/Async%20Await%20Support.md)
 - [Patterns](Patterns.md)
+  - [Web Components](Patterns/Using Web Components.md)
   - [React](Patterns/React.md)
   - [TypeScript](Patterns/TypeScript.md)
   - [Redux](Patterns/Redux.md)
