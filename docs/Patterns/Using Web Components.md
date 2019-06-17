@@ -63,7 +63,12 @@ class MyReactComponent extends React.Component<MyProps> {
   componentDidMount() {
     // Now `tabsetRef` is on the instance of the React component, properly typed, and any
     // of the web component instance methods and properties can be used
+    
+    // It has all the properties of HTMLElement
+    // Note that any registered listeners will need to call `setState` to update component
     this.tabset.addEventListener(...);
+    
+    // It has the methods and properties of the custom Web Component type
     this.tabset.selectNext();
   }
 }
